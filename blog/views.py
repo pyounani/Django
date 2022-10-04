@@ -8,9 +8,11 @@ class PostList(ListView):
     model = Post
     ordering = '-pk'
     # 템플릿은 모델형_List.html 자동으로 불려진다. : Post_list.html이 자동으로 템플릿으로 호출
+    # 매개변수 모델명_list : post_list
 class PostDetail(DetailView):
     model = Post
     # 템플릿은 모델형_detail.html 자동으로 불려진다. : Post_detail.html이 자동으로 템플릿으로 호출
+    # 매개변수 모델명 : post
 
 # def index(request):
 #     posts = Post.objects.all().order_by('-pk')
